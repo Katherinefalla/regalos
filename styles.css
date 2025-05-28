@@ -1,0 +1,224 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff0f5; /* rosa pastel */
+  font-family: 'Segoe UI', sans-serif;
+  color: #2e2e2e;
+  overflow-x: hidden;
+}
+
+.container {
+  text-align: center;
+  padding-top: 80px;
+}
+
+.titulo {
+  color: #8a2be2; /* morado fuerte */
+  font-size: 2.5em;
+  margin-bottom: 40px;
+}
+
+.botones {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.boton {
+  text-decoration: none;
+  padding: 15px 30px;
+  border-radius: 30px;
+  font-size: 1.2em;
+  color: white;
+  background-color: #d81b60; /* rosa fuerte */
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.boton:hover {
+  background-color: #b71550;
+}
+
+/* Corazones flotando (decoración) */
+.corazones::before {
+  content: "💖 💗 💓 💕 💘 💝";
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  animation: flotar 6s infinite linear;
+}
+
+@keyframes flotar {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(100vh); opacity: 0; }
+}
+.carta-body {
+  background: linear-gradient(to bottom, #ffe4ec, #fff);
+  padding: 40px 20px;
+}
+
+.carta-contenedor {
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(255, 105, 180, 0.3);
+  position: relative;
+  animation: aparecer 2s ease-in-out;
+}
+
+.carta-titulo {
+  color: #d81b60;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.carta-texto {
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: #4a4a4a;
+  opacity: 0;
+  animation: escribir 5s forwards;
+  animation-delay: 1s;
+}
+
+.botones-navegacion {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+@keyframes escribir {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes aparecer {
+  0% { opacity: 0; scale: 0.8; }
+  100% { opacity: 1; scale: 1; }
+}
+.juego-body {
+  background: linear-gradient(to bottom, #fce4ec, #f3e5f5);
+  padding: 40px 20px;
+}
+
+.juego-contenedor {
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+}
+
+.juego-titulo {
+  font-size: 2em;
+  color: #8a2be2;
+  margin-bottom: 10px;
+}
+
+.juego-instrucciones {
+  margin-bottom: 20px;
+  color: #555;
+}
+
+#laberinto {
+  display: grid;
+  grid-template-columns: repeat(10, 40px);
+  gap: 5px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.celda {
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  background-color: #ffe4ec;
+}
+
+.celda.jugador {
+  background-color: #d1c4e9;
+}
+
+.celda.meta {
+  background-color: #ce93d8;
+}
+.cuenta-body {
+  background: linear-gradient(to bottom, #fff1f8, #f3e5f5);
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.cuenta-contenedor {
+  max-width: 600px;
+  margin: auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(255, 105, 180, 0.3);
+}
+
+.cuenta-titulo {
+  font-size: 2.5em;
+  color: #d81b60;
+  margin-bottom: 20px;
+}
+
+.contador {
+  font-size: 2em;
+  color: #8e24aa;
+  margin-bottom: 20px;
+}
+
+.cuenta-texto {
+  font-size: 1.2em;
+  color: #444;
+}
+.recuerdos-body {
+  background: linear-gradient(to bottom, #f8bbd0, #e1bee7);
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.recuerdos-contenedor {
+  max-width: 600px;
+  margin: auto;
+  background-color: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(200, 100, 200, 0.2);
+}
+
+.recuerdos-titulo {
+  font-size: 2em;
+  color: #ba68c8;
+  margin-bottom: 20px;
+}
+
+.recuerdo-frase {
+  font-size: 1.4em;
+  font-style: italic;
+  color: #6a1b9a;
+  margin: 20px auto;
+  min-height: 80px;
+}
+
+.boton-corazon {
+  font-size: 2em;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  animation: latido 1s infinite alternate;
+}
+
+@keyframes latido {
+  from { transform: scale(1); }
+  to { transform: scale(1.2); }
+}
